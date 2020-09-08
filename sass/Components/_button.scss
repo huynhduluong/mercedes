@@ -1,0 +1,13 @@
+.blueButton{
+    @include styleButton($color-blue-0, $color-blue-0,$pd-0 - 2, $pd-0 + 4, $border-radius);
+    @include styleText($color-white-0, $fs-1, $fw-normal);
+    text-decoration: none;
+    outline: none;
+    &:hover{
+        @include styleHoverButton($color-white-0, $color-blue-0, $color-blue-1);
+    }
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}

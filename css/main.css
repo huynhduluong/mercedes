@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #141414;
+  background-color: #000;
 }
 
 html, body {
@@ -10,6 +10,29 @@ html, body {
   color: #fff;
   font-size: 14px;
   font-weight: normal;
+}
+
+.blueButton {
+  background-color: #00adef;
+  border: 1px solid #00adef;
+  padding: 6px 12px;
+  border-radius: 0px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  outline: none;
+}
+
+.blueButton:hover {
+  color: #fff;
+  border-color: #00adef;
+  background-color: #0088c6;
+}
+
+.blueButton:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .moreInfo .info {
@@ -87,5 +110,133 @@ html, body {
   color: #00adef;
   font-size: 14px;
   font-weight: normal;
+}
+
+.welcome .search {
+  background-color: #141414;
+  padding: 26px 0px;
+}
+
+.welcome .search .search__box {
+  padding: 0px;
+}
+
+.welcome .search .search__box .input-group input {
+  border: 1px solid #ececec;
+  border-radius: 0px;
+  border-right: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 8px 14px;
+}
+
+.welcome .search .search__box .input-group input::placeholder {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.welcome .search .search__box .input-group .input-group-append span {
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 0px;
+  border-left: none;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.welcome .search .search__box .input-group .input-group-append span i {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 0px;
+}
+
+.welcome .welcome__text {
+  padding: 50px 0px;
+}
+
+.welcome .welcome__text .container {
+  padding: 60px 0px;
+}
+
+.welcome .welcome__text .container .left h2 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+  font-family: 'Roboto', serif;
+  line-height: 45px;
+  margin-bottom: 14px;
+}
+
+.welcome .welcome__text .container .left p {
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.welcome .welcome__text .container .left p a {
+  color: #00adef;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.welcome .welcome__text .container .left p a:hover {
+  color: #0088c6;
+}
+
+.welcome .welcome__text .container .left .blueButton {
+  margin-top: 40px;
+}
+
+.welcome .name__brand .container {
+  padding: 0px;
+}
+
+.welcome .name__brand .container a {
+  position: relative;
+  display: block;
+}
+
+.welcome .name__brand .container a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0px;
+  display: block;
+  background-color: #00adef;
+  transition: all 0.16s;
+  opacity: 0;
+}
+
+.welcome .name__brand .container a:hover::after {
+  height: 7px;
+  opacity: 1;
+}
+
+.welcome .name__brand .container .col-md-3 {
+  padding: 0px 9px;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome .name__brand .container .col-6, .welcome .name__brand .container .col-md-3 {
+    padding: 5px;
+  }
+  .welcome .welcome__text {
+    padding: 20px 0px;
+  }
+  .welcome .welcome__text .container .left h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  .welcome .welcome__text .container .left .blueButton {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
