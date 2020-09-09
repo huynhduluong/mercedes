@@ -35,6 +35,29 @@ html, body {
   box-shadow: none;
 }
 
+.learnMoreButton {
+  background-color: #333;
+  border: 1px solid #333;
+  padding: 8px 20px;
+  border-radius: 0px;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  outline: none;
+}
+
+.learnMoreButton:hover {
+  color: #f0f0f0;
+  border-color: #1f1f1f;
+  background-color: #1f1f1f;
+}
+
+.learnMoreButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .moreInfo .info {
   color: #fff;
   font-size: 14px;
@@ -122,9 +145,8 @@ html, body {
 }
 
 .welcome .search .search__box .input-group input {
-  border: 1px solid #ececec;
+  border: none;
   border-radius: 0px;
-  border-right: none;
   color: #333;
   font-size: 18px;
   font-weight: normal;
@@ -237,6 +259,146 @@ html, body {
   }
   .welcome .welcome__text .container .left .blueButton {
     width: 100%;
+  }
+}
+
+.carousel__home {
+  max-height: 616px;
+}
+
+.carousel__home .carousel {
+  position: relative;
+}
+
+.carousel__home .carousel .carousel-item {
+  position: relative;
+}
+
+.carousel__home .carousel .carousel-item .carousel-caption {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+  background-color: transparent;
+  width: 100%;
+  margin: 0px 100px;
+}
+
+.carousel__home .carousel .carousel-item .carousel-caption h5 {
+  background-color: transparent;
+  color: #fff;
+  font-size: 42px;
+  font-weight: normal;
+  font-family: serif;
+  margin: 60px 0px 14px;
+  width: 45%;
+  animation-name: animateWord;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+}
+
+.carousel__home .carousel .carousel-item .carousel-caption .learnMoreButton {
+  margin-top: 25px;
+  animation-name: animateButton;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+}
+
+.carousel__home .carousel .carousel-control-prev, .carousel__home .carousel .carousel-control-next {
+  width: 30px;
+  z-index: 100;
+  opacity: 1;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+
+.carousel__home .carousel .carousel-control-next {
+  left: unset;
+  right: 50px;
+  justify-content: right !important;
+}
+
+.carousel__home .carousel .carousel-control-next-icon, .carousel__home .carousel .carousel-control-prev-icon {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 992px) {
+  .carousel__home .carousel .carousel-item .carousel-caption {
+    width: calc(100% - 200px);
+    margin: 0px auto;
+  }
+  .carousel__home .carousel .carousel-item .carousel-caption h5 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 40px 0px 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__home {
+    height: 550px;
+    background: #fff !important;
+  }
+  .carousel__home .carousel {
+    position: relative;
+  }
+  .carousel__home .carousel .carousel-item {
+    background: #fff;
+  }
+  .carousel__home .carousel .carousel-item .carousel-caption {
+    width: calc(100% - 60px);
+    position: unset;
+    margin: 0px 30px;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+  .carousel__home .carousel .carousel-item .carousel-caption h5 {
+    width: 100%;
+    color: #333;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 40px 0px 14px;
+  }
+  .carousel__home .carousel .carousel-control-prev, .carousel__home .carousel .carousel-control-next {
+    top: 25%;
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes animateWord {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animateButton {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

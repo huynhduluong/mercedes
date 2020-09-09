@@ -11,3 +11,17 @@
         box-shadow: none;
     }
 }
+
+.learnMoreButton{
+    @include styleButton($color-black-2, $color-black-2,$pd-0, $pd-1,$border-radius);
+    @include styleText($color-gray-3, $fs-1, $fw-normal);
+    text-decoration: none;
+    outline: none;
+    &:hover{
+        @include styleHoverButton($color-gray-3,$color-black-3,$color-black-3);
+    }
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
