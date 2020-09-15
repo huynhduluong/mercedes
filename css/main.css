@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
+  position: relative;
 }
 
 html, body {
@@ -10,6 +10,50 @@ html, body {
   color: #fff;
   font-size: 14px;
   font-weight: normal;
+  background-color: #000;
+}
+
+#myModal .modal-header {
+  border-bottom: none;
+}
+
+#myModal .modal-body {
+  padding: 20px 40px;
+}
+
+#myModal .modal-body ul {
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+#myModal .modal-body ul a {
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#myModal .modal-body ul a.active {
+  color: #00adef;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#myModal .modal-body #myTabContent .brandhub-legal-headline p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#myModal .modal-body #myTabContent .brandhub-legal-text p {
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
 }
 
 .blueButton {
@@ -308,7 +352,7 @@ html, body {
 
 .carousel__home .carousel .carousel-control-prev, .carousel__home .carousel .carousel-control-next {
   width: 30px;
-  z-index: 100;
+  z-index: 10;
   opacity: 1;
   height: 40px;
   position: absolute;
@@ -399,6 +443,204 @@ html, body {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+.header__space {
+  height: 108px;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  height: 108px;
+  z-index: 100;
+  width: 100%;
+  background-color: #000;
+}
+
+.header .header__content {
+  position: relative;
+}
+
+.header .header__content .header__brand .logo {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 22px;
+  left: 18px;
+  z-index: 10;
+}
+
+.header .header__content .header__brand .brand {
+  position: absolute;
+  top: 54px;
+  left: 146px;
+  height: 28px;
+  width: 112px;
+}
+
+.header .header__content .nav__top {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+}
+
+.header .header__content .nav__top ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0px;
+}
+
+.header .header__content .nav__top ul li {
+  display: block;
+  margin: 5px 14px;
+}
+
+.header .header__content .nav__top ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.header .header__content .nav__top ul li a i {
+  border: 1px solid #fff;
+  padding: 3px 3px;
+  font-size: 8px;
+  text-align: center;
+}
+
+.header .header__content .nav__top ul li a:hover {
+  color: #00adef;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.header .header__content .nav__top ul li a:hover i {
+  border: 1px solid #00adef;
+}
+
+.header .header__content .nav__bottom {
+  position: absolute;
+  top: 62px;
+  right: 18px;
+}
+
+.header .header__content .nav__bottom .navbar {
+  padding: 0px;
+}
+
+.header .header__content .nav__bottom .navbar .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.header .header__content .nav__bottom .navbar .navbar-collapse .navbar-nav .nav-item {
+  margin: 0px 18px;
+}
+
+.header .header__content .nav__bottom .navbar .navbar-collapse .navbar-nav .nav-item a.nav-link {
+  text-decoration: none;
+  padding: 0px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.header .header__content .nav__bottom .navbar .navbar-collapse .navbar-nav .nav-item a.nav-link:hover {
+  color: #00adef;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.header .header__content .nav__bottom .navbar .navbar-collapse .navbar-nav .nav-item a.nav-link.active {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.header .header__content .nav__bottom .navbar .buttonCollapse i {
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header .header__content .nav__bottom .navbar .buttonCollapse:hover i {
+  color: #0088c6;
+}
+
+.header .header__content .nav__bottom .navbar .searchCollapse i {
+  font-size: 16px;
+  margin-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .header__content .nav__bottom .navbar .searchCollapse:hover i {
+  color: #0088c6;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__space {
+    height: 97px;
+  }
+  .header {
+    height: 97px;
+  }
+  .header .nav__bottom .navbar-collapse {
+    position: fixed;
+    top: 97px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: #000;
+    transition: 0.5s;
+    text-align: center;
+  }
+  .header .nav__bottom .navbar-collapse li {
+    display: block;
+    line-height: 62px;
+  }
+  .header .nav__bottom .navbar-collapse li a.nav-link {
+    font-size: 22px !important;
+  }
+  .header .nav__bottom .navbar-collapse.show {
+    left: 0;
+    height: calc(100vh - 100px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header__space {
+    height: 80px;
+  }
+  .header {
+    height: 80px;
+  }
+  .header .header__content .header__brand .logo {
+    width: 44px;
+    height: 44px;
+  }
+  .header .header__content .header__brand .brand {
+    height: 23px;
+    left: 102px;
+    top: 36px;
+    width: 91px;
+  }
+  .header .header__content .nav__bottom {
+    top: 50px;
+  }
+  .header .header__content .nav__bottom .navbar-collapse {
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__content .nav__top ul li {
+    margin: 7px 0px;
+    margin-left: 14px;
   }
 }
 /*# sourceMappingURL=main.css.map */
