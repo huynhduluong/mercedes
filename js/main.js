@@ -21,3 +21,38 @@ document.getElementById("menu__share").addEventListener("click", function () {
     };
 });
 
+/**
+ * hiệu ứng khi bấm navbar toggle của header
+ */
+var buttonCollapse = 1;
+document.querySelector(".buttonCollapse").addEventListener("click", function () {
+    if (buttonCollapse == 1) {
+        document.querySelector(".movingNav").style.display = "none";
+        console.log("aaaaa");
+        buttonCollapse = 0;
+    } else {
+        document.querySelector(".movingNav").style.display = "block";
+        buttonCollapse = 1;
+    }
+})
+
+/**
+ * hiệu ứng cho header khi window scroll
+ */
+var hiddenHeader = document.querySelector(".header");
+
+window.addEventListener("scroll", myFunction);
+
+var scrollValue = 0;
+function myFunction() {
+    console.log(scrollValue);
+    if(document.documentElement.scrollTop > scrollValue){
+        hiddenHeader.style.visibility = "hidden";  
+        hiddenHeader.style.transform = "translateY(-108px)";
+        scrollValue = document.documentElement.scrollTop;
+    }else{ 
+        hiddenHeader.style.visibility = "visible";
+        hiddenHeader.style.transform = "translateY(0px)";
+        scrollValue = document.documentElement.scrollTop;
+    }   
+}

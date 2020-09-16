@@ -11,6 +11,7 @@ html, body {
   font-size: 14px;
   font-weight: normal;
   background-color: #000;
+  scroll-behavior: smooth;
 }
 
 #myModal .modal-header {
@@ -457,6 +458,7 @@ html, body {
   z-index: 100;
   width: 100%;
   background-color: #000;
+  transition: all .5s;
 }
 
 .header .header__content {
@@ -596,7 +598,7 @@ html, body {
     width: 100%;
     height: calc(100vh - 100px);
     background: #000;
-    transition: 0.5s;
+    transition: all 0.25s;
     text-align: center;
   }
   .header .nav__bottom .navbar-collapse li {

@@ -9,4 +9,5 @@ html,body{
     font-family: 'Roboto', sans-serif;
     @include styleText($color-white-0,$fs-1,$fw-normal);
     background-color: $color-black-0;
+    scroll-behavior: smooth;
 }
