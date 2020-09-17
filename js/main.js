@@ -56,3 +56,34 @@ function myFunction() {
         scrollValue = document.documentElement.scrollTop;
     }   
 }
+
+
+
+/**
+ * showmore buttom
+ */
+
+function hiddenItem() {
+	var x = document.getElementsByClassName("hidden__item");
+	for (var i = 0; i < x.length; i++) {
+		x[i].style.display = "inline-block";
+	}
+	var a = document.getElementsByClassName("new__button");
+	a[0].style.display="none";
+}
+function hiddenItem1() {
+	var x = document.getElementsByClassName("hidden__item_1");
+	for (var i = 0; i < x.length; i++) {
+		x[i].style.display = "inline-block";
+	}
+	var a = document.getElementsByClassName("new__button");
+	a[1].style.display="none";
+}
+function hiddenItem2() {
+	var x = document.getElementsByClassName("hidden__item_2");
+	for (var i = 0; i < x.length; i++) {
+		x[i].style.display = "inline-block";
+	}
+	var a = document.getElementsByClassName("new__button");
+	a[2].style.display="none";
+}

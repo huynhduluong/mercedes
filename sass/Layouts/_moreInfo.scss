@@ -1,7 +1,7 @@
 .moreInfo{
     .info{
         @include styleText($color-white-0,$fs-1,$fw-normal);
-        margin: 0px $mg-3;
+        margin: $mg-3 $mg-3;
         p{
             margin-bottom: $mg-1;
         }
@@ -20,6 +20,7 @@
     }
     .moreTopic{
         margin: $mg-3;
+        margin-bottom: 0px;
         .topic{
             margin: 0px;
             .topic__item{
@@ -57,5 +58,29 @@
             }
         }
         
+    }
+}
+
+@include responsive("large"){
+    .moreInfo{
+        .moreTopic{
+            .topic{
+                .topic__item{
+                    h2{
+                        @include styleText($color-white-0, $fs-4,$fw-normal);
+                    }
+                    ul{
+                        li{
+                            a{
+                                @include styleText($color-gray-0, $fs-1 - 1,$fw-normal);
+                                &:hover{
+                                    @include styleText($color-blue-0, $fs-1 - 1,$fw-normal);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
