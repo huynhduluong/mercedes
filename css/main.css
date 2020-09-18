@@ -301,6 +301,12 @@ html, body {
   padding: 0px 9px;
 }
 
+@media screen and (max-width: 1200px) {
+  .welcome .welcome__text {
+    padding: 25px 0px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .search .container {
     max-width: calc(100% - 60px);
@@ -807,9 +813,6 @@ html, body {
   .rightNav .movingNav ul li:nth-last-child(1) {
     position: relative;
   }
-  .rightNav .movingNav ul li:nth-last-child(1) i {
-    z-index: 201;
-  }
   .rightNav .movingNav ul li:nth-last-child(1) span {
     display: block;
     margin-top: -8px;
@@ -817,12 +820,13 @@ html, body {
     color: #fff;
     font-size: 10px;
     font-weight: normal;
-    z-index: 201;
   }
   .rightNav .movingNav ul li:nth-last-child(1) .dropdown__menu {
     position: absolute;
-    top: 60px;
+    bottom: 62px;
     left: 0;
+    height: 0px;
+    overflow: hidden;
     width: 100%;
     display: inline-block;
     transition: all .5s;
@@ -842,10 +846,6 @@ html, body {
     height: 64px;
     width: 100%;
   }
-}
-
-.new .new__content {
-  background-color: #000;
 }
 
 .new .new__content ul {
@@ -1241,7 +1241,6 @@ html, body {
 }
 
 .stay {
-  background-color: #000;
   color: #999;
   font-size: 13.4px;
   font-weight: normal;

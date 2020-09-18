@@ -1,5 +1,5 @@
 .stay {
-    background-color: $color-black-0;
+    // background-color: $color-black-0;
     @include styleText($color-gray-0, 13.4px, $fw-normal);
     .stay__content {
         width: calc(100% - 60px);

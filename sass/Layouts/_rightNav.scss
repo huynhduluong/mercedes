@@ -121,21 +121,19 @@
                     }
                     &:nth-last-child(1){
                         position: relative;
-                        i{
-                            z-index: 201;
-                            
-                        }
                         span{
                             display: block;
                             margin-top: -8px;
                             line-height: 16px;
                             @include styleText($color-white-0, $fs-0 - 2, $fw-normal);
-                            z-index: 201;
                         }
                         .dropdown__menu{
                             position: absolute;
-                            top: 60px;
+                            // top: 60px;
+                            bottom: 62px;
                             left: 0;
+                            height: 0px;
+                            overflow: hidden;
                             width: 100%;
                             display: inline-block;
                             transition: all .5s;

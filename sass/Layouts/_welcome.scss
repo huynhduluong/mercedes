@@ -91,6 +91,14 @@
     }
 }
 
+@include responsive("extra-large"){
+    .welcome{
+        .welcome__text{
+            padding: $pd-1 + 5 0px;
+        }
+    }
+}
+
 
 @include responsive("medium") {
     .search{

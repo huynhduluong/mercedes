@@ -13,10 +13,10 @@ document.getElementById("menu__share").addEventListener("click", function () {
     }
 
     if (shareClick == 0) {
-        document.querySelector(".dropdown__menu").style.top = "-336px";
+        document.querySelector(".dropdown__menu").style.height = "336px";
         shareClick = 1;
     } else {
-        document.querySelector(".dropdown__menu").style.top = "60px";
+        document.querySelector(".dropdown__menu").style.height = "0px";
         shareClick = 0;
     };
 });
@@ -42,7 +42,6 @@ var hiddenHeader = document.querySelector(".header");
 var scrollValue = 0;
 
 window.addEventListener("scroll", function () {
-    console.log(buttonCollapse);
     if (buttonCollapse === 0) {
         return;
     }
@@ -56,12 +55,6 @@ window.addEventListener("scroll", function () {
         scrollValue = document.documentElement.scrollTop;
     }
 });
-
-
-
-// function myFunction() {
-
-// }
 
 
 
